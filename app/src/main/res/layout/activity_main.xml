@@ -8,12 +8,87 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/caixa"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Calculadora"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btm_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caixa" />
+
+    <Button
+        android:id="@+id/btm_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@id/btm_1"
+        app:layout_constraintTop_toBottomOf="@id/caixa" />
+
+    <Button
+        android:id="@+id/btm_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@id/btm_2"
+        app:layout_constraintTop_toBottomOf="@id/caixa" />
+
+    <Button
+        android:id="@+id/btm_soma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@id/btm_3"
+        app:layout_constraintTop_toBottomOf="@id/caixa" />
+
+    <Button
+        android:id="@+id/btm_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btm_1" />
+
+    <Button
+        android:id="@+id/btm_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@id/btm_4"
+        app:layout_constraintTop_toBottomOf="@id/btm_2" />
+
+    <Button
+        android:id="@+id/btm_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@id/btm_5"
+        app:layout_constraintTop_toBottomOf="@id/btm_3" />
+
+    <Button
+        android:id="@+id/btm_subtracao"
+        app:layout_constraintStart_toEndOf="@id/btm_6"
+        app:layout_constraintTop_toBottomOf="@id/btm_soma"
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btm_7"
+        android:text="7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
