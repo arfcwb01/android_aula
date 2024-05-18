@@ -69,13 +69,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl_1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Leandro"
-            app:layout_constraintEnd_toEndOf="parent"
+        <Button
+            android:id="@+id/btm_4"
+            android:text="4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btm_5"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@id/btm_4"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btm_6"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@id/btm_5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/menos"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@id/btm_6"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
