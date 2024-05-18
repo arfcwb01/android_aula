@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val btn3: Button = findViewById(R.id.btn_3)
         val btnvezes: Button = findViewById(R.id.btn_vezes)
         btn1.setOnClickListener {
-            tvDisplay.text.toString() + "1"
+            tvDisplay.text = tvDisplay.text.toString() + "1"
         }
 
         btn2.setOnClickListener {
