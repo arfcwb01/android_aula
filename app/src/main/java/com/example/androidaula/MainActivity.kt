@@ -24,6 +24,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val tvDisplay:TextView=findViewById(R.id.tv_display)
+        tvDisplay.text"olá mundo"
+        val btn_4: Button=findViewById(R.id.btm_4)
+        val btn_5: Button=findViewById(R.id.btm_5)
+        val btn_6: Button=findViewById(R.id.btm_6)
+        val btn_subtracao: Button=findViewById(R.id.menos)
+
+
+
         val tvDisplay: TextView = findViewById(R.id.tv_display)
         val btn1: Button = findViewById(R.id.btn_1)
         val btn2: Button = findViewById(R.id.btn_2)
