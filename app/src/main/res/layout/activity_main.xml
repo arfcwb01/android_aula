@@ -52,13 +52,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl_display">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Guilherme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="0dp"
+            android:text="7"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginBottom="0dp"
+            android:text="8"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="119dp"
+            android:text="9"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="16dp"
+            android:text="+"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,13 +99,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl_1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="Leandro"
-            app:layout_constraintEnd_toEndOf="parent"
+        <Button
+            android:id="@+id/btm_4"
+            android:text="4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btm_5"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@id/btm_4"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btm_6"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@id/btm_5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/menos"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@id/btm_6"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -132,17 +184,46 @@
         android:id="@+id/cl_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl_3">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:text="________"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="0dp"
+            android:text="CE"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginBottom="0dp"
+            android:text="0"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="119dp"
+            android:text="="
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="16dp"
+            android:text="/"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
