@@ -59,8 +59,11 @@
             android:layout_marginBottom="0dp"
             android:text="7"
             android:textSize="40sp"
+            android:id="@+id/btn_7"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <Button
             android:layout_width="78dp"
@@ -68,18 +71,22 @@
             android:layout_marginStart="115dp"
             android:layout_marginBottom="0dp"
             android:text="8"
+            android:id="@+id/btn_8"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_marginEnd="119dp"
             android:text="9"
+            android:id="@+id/btn_9"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:layout_width="78dp"
@@ -87,8 +94,10 @@
             android:layout_marginEnd="16dp"
             android:text="+"
             android:textSize="40sp"
+            android:id="@+id/btn_mais"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -193,9 +202,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginBottom="0dp"
             android:text="CE"
+            android:id="@+id/btn_limpar"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:layout_width="78dp"
@@ -203,27 +214,33 @@
             android:layout_marginStart="115dp"
             android:layout_marginBottom="0dp"
             android:text="0"
+            android:id="@+id/btn_0"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_marginEnd="119dp"
             android:text="="
+            android:id="@+id/btn_igual"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:layout_width="78dp"
             android:layout_height="78dp"
             android:layout_marginEnd="16dp"
             android:text="/"
+            android:id="@+id/btn_dividir"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
