@@ -1,6 +1,8 @@
 package com.example.androidaula
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +22,27 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val tvDisplay: TextView = findViewById(R.id.tv_display)
+        val btn1: Button = findViewById(R.id.btn_1)
+        val btn2: Button = findViewById(R.id.btn_2)
+        val btn3: Button = findViewById(R.id.btn_3)
+        val btnvezes: Button = findViewById(R.id.btn_vezes)
+        btn1.setOnClickListener {
+            tvDisplay.text.toString() + "1"
+        }
+
+        btn2.setOnClickListener {
+            tvDisplay.text = "2"
+        }
+
+        btn3.setOnClickListener {
+            tvDisplay.text = "3"
+        }
+
+        btnvezes.setOnClickListener {
+            tvDisplay.text = "*"
         }
     }
 }
