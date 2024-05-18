@@ -88,7 +88,59 @@
 
     <Button
         android:id="@+id/btm_7"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="7"
+        app:layout_constraintTop_toBottomOf="@id/btm_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btm_8"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@id/btm_7"
+        app:layout_constraintTop_toBottomOf="@id/btm_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btm_9"
+        android:text="9"
+        app:layout_constraintTop_toBottomOf="@id/btm_6"
+        app:layout_constraintStart_toEndOf="@id/btm_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btm_multiplicacao"
+        android:text="*"
+        app:layout_constraintTop_toBottomOf="@id/btm_subtracao"
+        app:layout_constraintStart_toEndOf="@id/btm_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/ce"
+        android:text="CE"
+        app:layout_constraintTop_toBottomOf="@id/btm_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btm_0"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/btm_8"
+        app:layout_constraintStart_toEndOf="@id/ce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/igual"
+        android:text="="
+        app:layout_constraintTop_toBottomOf="@id/btm_9"
+        app:layout_constraintStart_toEndOf="@id/btm_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btm_dividir"
+        android:text="/"
+        app:layout_constraintTop_toBottomOf="@id/btm_multiplicacao"
+        app:layout_constraintStart_toEndOf="@id/igual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
