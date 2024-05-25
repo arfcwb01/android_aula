@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         // ActivityMainBinding.inflate(layoutInflater)
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        var num1: Double = 0.0
+        var num2: Double = 0.0
+        var result: Double = 0.0
+        var operacao: String = ""
         val tvDisplay: TextView = findViewById(R.id.tv_display)
 
         val btn1: Button = findViewById(R.id.btn_1)
@@ -41,9 +46,18 @@ class MainActivity : AppCompatActivity() {
         val btnDividir: Button = findViewById(R.id.btn_dividir)
         val btn_subtracao: Button = findViewById(R.id.menos)
         val btnvezes: Button = findViewById(R.id.btn_vezes)
+        val btnPonto: Button = findViewById(R.id.btn_ponto)
+
+        btnPonto.setOnClickListener {
+            if (tvDisplay.text.toString().isEmpty()) {
+                tvDisplay.text = "0."
+            } else {
+                tvDisplay.text = tvDisplay.text.toString() + "."
+            }
+        }
 
         btn0.setOnClickListener {
-            tvDisplay.text = "0"
+            tvDisplay.text = tvDisplay.text.toString() + "0"
         }
 
         btn1.setOnClickListener {
@@ -51,27 +65,80 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn2.setOnClickListener {
-            tvDisplay.text = "2"
+            tvDisplay.text = tvDisplay.text.toString() + "2"
         }
 
         btn3.setOnClickListener {
-            tvDisplay.text = "3"
+            tvDisplay.text = tvDisplay.text.toString() + "3"
         }
 
-        btn7.setOnClickListener { tvDisplay.text = "7" }
-        btn8.setOnClickListener { tvDisplay.text = "8" }
-        btn9.setOnClickListener { tvDisplay.text = "9" }
-        btnMais.setOnClickListener { tvDisplay.text = "+" }
+        btn_4.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "4"
+        }
+
+        btn_5.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "5"
+        }
+
+        btn_6.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "6"
+        }
+
+        btn7.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "7"
+        }
+
+        btn8.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "8"
+        }
+
+        btn9.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "9"
+        }
+
+        btnMais.setOnClickListener {
+            num1 = tvDisplay.text.toString().toDouble()
+            operacao = "+"
+            tvDisplay.text = ""
+        }
+
+        btn_subtracao.setOnClickListener {
+            num1 = tvDisplay.text.toString().toDouble()
+            operacao = "-"
+            tvDisplay.text = ""
+        }
 
         btnLimpar.setOnClickListener {
-            tvDisplay.text = " "
+            tvDisplay.text = ""
         }
+
         btnvezes.setOnClickListener {
-            tvDisplay.text = "*"
+            num1 = tvDisplay.text.toString().toDouble()
+            operacao = "*"
+            tvDisplay.text = ""
         }
-        btnIgual.setOnClickListener { tvDisplay.text = "=" }
-        btnDividir.setOnClickListener { tvDisplay.text = "/" }
 
+        btnDividir.setOnClickListener {
+            num1 = tvDisplay.text.toString().toDouble()
+            operacao = "/"
+            tvDisplay.text = ""
+        }
 
+        btnIgual.setOnClickListener {
+            num2 = tvDisplay.text.toString().toDouble()
+            result = calculaResultado(operacao, num1, num2)
+            tvDisplay.text = result.toString()
+        }
     }
+}
+
+fun calculaResultado(operacao: String, num1: Double, num2: Double): Double {
+    var result: Double = 0.0
+    when (operacao) {
+        "+" -> result = num1 + num2
+        "-" -> result = num1 - num2
+        "*" -> result = num1 * num2
+        "/" -> result = num1 / num2
+    }
+    return result
 }
