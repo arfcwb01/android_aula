@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         val btn1: Button = findViewById(R.id.btn_1)
         val btn2: Button = findViewById(R.id.btn_2)
         val btn3: Button = findViewById(R.id.btn_3)
-        val btn_4: Button = findViewById(R.id.btm_4)
-        val btn_5: Button = findViewById(R.id.btm_5)
-        val btn_6: Button = findViewById(R.id.btm_6)
+        val btn4: Button = findViewById(R.id.btm_4)
+        val btn5: Button = findViewById(R.id.btm_5)
+        val btn6: Button = findViewById(R.id.btm_6)
         val btn7: Button = findViewById(R.id.btn_7)
         val btn8: Button = findViewById(R.id.btn_8)
         val btn9: Button = findViewById(R.id.btn_9)
@@ -42,6 +42,12 @@ class MainActivity : AppCompatActivity() {
         val btn_subtracao: Button = findViewById(R.id.menos)
         val btnvezes: Button = findViewById(R.id.btn_vezes)
 
+        var n1: Double = 0.0
+        var n2: Double = 0.0
+        var result: Double = 0.0
+        var operacao: String = "+"
+
+
         btn0.setOnClickListener {
             tvDisplay.text = "0"
         }
@@ -51,27 +57,78 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn2.setOnClickListener {
-            tvDisplay.text = "2"
+            tvDisplay.text = tvDisplay.text.toString() + "2"
         }
 
         btn3.setOnClickListener {
-            tvDisplay.text = "3"
+            tvDisplay.text = tvDisplay.text.toString() + "3"
+        }
+        btn4.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "4"
+        }
+        btn5.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "5"
+        }
+        btn6.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "6"
+        }
+        btn7.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "7"
         }
 
-        btn7.setOnClickListener { tvDisplay.text = "7" }
-        btn8.setOnClickListener { tvDisplay.text = "8" }
-        btn9.setOnClickListener { tvDisplay.text = "9" }
-        btnMais.setOnClickListener { tvDisplay.text = "+" }
+        btn8.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "8"
+        }
+        btn9.setOnClickListener {
+            tvDisplay.text = tvDisplay.text.toString() + "9"
+        }
+
+
+        btnMais.setOnClickListener {
+            operacao = "+"
+            n1 = tvDisplay.text.toString().toDouble()
+            tvDisplay.text = " "
+
+        }
+        btn_subtracao.setOnClickListener {
+            operacao = "-"
+            n1 = tvDisplay.text.toString().toDouble()
+            tvDisplay.text = " "
+        }
 
         btnLimpar.setOnClickListener {
             tvDisplay.text = " "
         }
         btnvezes.setOnClickListener {
-            tvDisplay.text = "*"
+            operacao = "*"
+            n1 = tvDisplay.text.toString().toDouble()
+            tvDisplay.text = " "
         }
-        btnIgual.setOnClickListener { tvDisplay.text = "=" }
-        btnDividir.setOnClickListener { tvDisplay.text = "/" }
+
+        btnIgual.setOnClickListener {
+            n2 = tvDisplay.text.toString().toDouble()
+            result= calculaResultado(operacao,n1,n2)
+            tvDisplay.text = result.toString()
+
+        }
+
+        btnDividir.setOnClickListener {
+            operacao = "/"
+            n2 = tvDisplay.text.toString().toDouble()
+            tvDisplay.text = " "
+        }
 
 
     }
+}
+
+fun calculaResultado(op: String, n1: Double, n2: Double): Double {
+    var r: Double = 0.0
+    when (op) {
+        "+" -> r = n1 + n2
+        "-" -> r = n1 - n2
+        "/" -> r = n1 / n2
+        "*" -> r = n1 * n2
+    }
+    return r
 }
